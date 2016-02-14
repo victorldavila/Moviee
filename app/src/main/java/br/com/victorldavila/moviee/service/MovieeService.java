@@ -28,7 +28,7 @@ public interface MovieeService {
     public static final String ImageUrl = "https://image.tmdb.org/t/p/w500";
     public static final String VideoImageUrl = "http://img.youtube.com/vi/";
 
-    public static final String API_KEY = "?api_key=fcfc8516fa3b8989e68936634bc5ea84";
+    public static final String API_KEY = "?api_key=XXX";
     public static final String MOVIE_URL = "discover/movie";
 
     @Headers({
