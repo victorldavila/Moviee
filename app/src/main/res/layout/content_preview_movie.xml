@@ -75,18 +75,26 @@
             android:layout_height="60dp" />
     </LinearLayout>
 
+    <ScrollView
+        android:layout_marginTop="10dp"
+        android:id="@+id/scroll"
+        android:layout_below="@+id/posterLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
     <TextView
         android:id="@+id/about"
         android:textSize="13dp"
-        android:layout_below="@+id/posterLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+    </ScrollView>
 
     <TextView
         android:id="@+id/label"
         android:textSize="20dp"
         android:text="Trailers"
-        android:layout_below="@+id/about"
+        android:layout_below="@+id/scroll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
