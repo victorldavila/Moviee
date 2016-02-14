@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_margin="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <ProgressBar
+        android:layout_gravity="center"
+        android:id="@+id/load1"
+        android:visibility="visible"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/trailer"
+        fresco:actualImageScaleType="fitXY"
+        fresco:placeholderImage="@androis:color/transparent"
+        fresco:placeholderImageScaleType="fitCenter"
+        fresco:failureImage="@androis:color/transparent"
+        fresco:failureImageScaleType="centerInside"
+        fresco:retryImage="@androis:color/transparent"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center"
+        android:textSize="20dp"
+        android:text="Trailer 1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

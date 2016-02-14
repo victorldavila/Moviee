@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+        card_view:cardElevation="1dp"
+        android:layout_marginBottom="1dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ProgressBar
+                android:layout_gravity="center"
+                android:id="@+id/load1"
+                android:visibility="visible"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/poster"
+                fresco:actualImageScaleType="fitXY"
+                fresco:placeholderImage="@androis:color/transparent"
+                fresco:placeholderImageScaleType="fitCenter"
+                fresco:failureImage="@androis:color/transparent"
+                fresco:failureImageScaleType="centerInside"
+                fresco:retryImage="@androis:color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                />
+
+        </FrameLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

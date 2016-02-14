@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fresco="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="br.com.victorldavila.moviee.PreviewMovieActivity"
+    tools:showIn="@layout/activity_preview_movie">
+
+    <FrameLayout
+        android:id="@+id/posterLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:layout_gravity="center"
+            android:id="@+id/load1"
+            android:visibility="visible"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/poster"
+        fresco:actualImageScaleType="fitXY"
+        fresco:placeholderImage="@androis:color/transparent"
+        fresco:placeholderImageScaleType="fitCenter"
+        fresco:failureImage="@androis:color/transparent"
+        fresco:failureImageScaleType="centerInside"
+        fresco:retryImage="@androis:color/transparent"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/posterLayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/year"
+            android:textSize="30dp"
+            android:text="2015"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/time"
+            android:textSize="20dp"
+            android:text="120 min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/points"
+            android:textSize="13dp"
+            android:text="8.5/10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_marginTop="10dp"
+            android:layout_width="100dp"
+            android:layout_height="60dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/about"
+        android:textSize="13dp"
+        android:layout_below="@+id/posterLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/label"
+        android:textSize="20dp"
+        android:text="Trailers"
+        android:layout_below="@+id/about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- A RecyclerView with some commonly used attributes -->
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/label"
+        android:id="@+id/trailerRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>
